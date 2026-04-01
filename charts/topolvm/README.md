@@ -22,6 +22,7 @@ See [Getting Started](https://github.com/topolvm/topolvm/blob/topolvm-chart-v16.
 | controller.csiProvisioner.kubeAPICapacityQPS | float | `0` | Specify `--kube-api-capacity-qps` for csi-provisioner. Set to 0 to use csi-provisioner defaults. |
 | controller.csiProvisioner.kubeAPIQPS | int | `0` | Specify `--kube-api-qps` for csi-provisioner. Set to 0 to use csi-provisioner defaults. |
 | controller.csiProvisioner.workerThreads | int | `0` | Specify `--worker-threads` for csi-provisioner. Set to 0 to use csi-provisioner defaults. |
+| controller.csiResizer.handleVolumeInUseError | bool | `true` | Specify `--handle-volume-inuse-error` for csi-resizer. |
 | controller.initContainers | list | `[]` | Additional initContainers for the controller service. |
 | controller.labels | object | `{}` | Additional labels to be added to the Deployment. |
 | controller.leaderElection.enabled | bool | `true` | Enable leader election for controller and all sidecars. |

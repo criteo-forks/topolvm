@@ -448,6 +448,10 @@ controller:
     # controller.csiProvisioner.kubeAPIQPS -- Specify `--kube-api-qps` for csi-provisioner. Set to 0 to use csi-provisioner defaults.
     kubeAPIQPS: 0
 
+  csiResizer:
+    # controller.csiResizer.handleVolumeInUseError -- Specify `--handle-volume-inuse-error` for csi-resizer.
+    handleVolumeInUseError: true
+
   storageCapacityTracking:
     # controller.storageCapacityTracking.enabled -- Enable Storage Capacity Tracking for csi-provisioner.
     enabled: true
