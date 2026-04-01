@@ -435,6 +435,9 @@ controller:
   csiProvisioner:
     # controller.csiProvisioner.extraArgs -- Additional arguments appended to the built-in csi-provisioner arguments. Users are responsible for ensuring they are valid csi-provisioner args.
     extraArgs: []
+  csiResizer:
+    # controller.csiResizer.extraArgs -- Additional arguments appended to the built-in csi-resizer arguments. Users are responsible for ensuring they are valid csi-resizer args.
+    extraArgs: []
 
   storageCapacityTracking:
     # controller.storageCapacityTracking.enabled -- Enable Storage Capacity Tracking for csi-provisioner.
