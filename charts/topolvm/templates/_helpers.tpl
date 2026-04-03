@@ -66,4 +66,16 @@ Plugin Name.
 */}}
 {{- define "topolvm.pluginName" -}}
 {{ if .Values.useLegacy }}topolvm.cybozu.com{{ else }}topolvm.io{{ end }}
-{{- end }} 
+{{- end }}
+
+{{/*
+List of storage classes
+*/}}
+{{- define "topolvm.storageClassList" -}}
+{{- range $idx, $val := $.Values.storageClasses -}}
+{{- if $idx }}
+{{- print ", "  -}}
+{{- end -}}
+{{- $val.name | squote -}}
+{{- end -}}
+{{- end -}}

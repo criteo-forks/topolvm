@@ -60,6 +60,9 @@ webhooks:
     admissionReviewVersions:
     - v1
     - v1beta1
+    matchConditions:
+    - name: only-keep-topolvm-pvcs
+      expression: "object.spec.storageClassName in [{{- include "topolvm.storageClassList" . }}]"
     namespaceSelector:
       matchExpressions:
       - key: {{ include "topolvm.pluginName" . }}/webhook
